@@ -1,0 +1,37 @@
+###
+# traefik configuration
+
+## logs
+[log]
+  level = "INFO"
+
+# configure docker provider
+[providers.docker]
+  endpoint = "unix:///var/run/docker.sock"
+  network="docker_private0"
+  exposedByDefault = false
+
+# configure dynamic providers
+[providers.file]
+  directory = "/etc/traefik"
+  watch = true
+
+# enable secure dashboard
+[api]
+  dashboard = true
+  insecure = false
+
+# define entrypoints
+[entryPoints]
+  [entryPoints.web]
+    address = ":80"
+  [entryPoints.web-secure]
+    address = ":443"
+
+# let's encrypt : https
+[certificatesResolvers.default-ssl.acme]
+  email = "contact@domain.tld"
+  storage = "/etc/traefik-ssl/acme.json"
+  [certificatesResolvers.default-ssl.acme.httpChallenge]
+    # used during the challenge
+    entryPoint = "web"
