@@ -1,0 +1,33 @@
+## Dynamic configuration
+
+# middlewares
+[http.middlewares]
+  # basic auth : declaring the user list
+  [http.middlewares.global-auth.basicAuth]
+    realm = "Access denied"
+    removeHeader = true
+    usersFile = "/etc/traefik/auth-usersfile"
+  # for pihole : strip prefix
+  [http.middlewares.pihole-stripprefix.stripPrefix]
+    prefixes = ["/pihole"]
+  # for pihole : add prefix
+  [http.middlewares.pihole-addprefix.addPrefix]
+    prefix = "/admin"
+
+
+# pi-hole : http router
+[http.routers]
+  [http.routers.pihole]
+    rule = "PathPrefix(`/pihole`)"
+    service = "service-pihole"
+    middlewares = ["global-auth", "pihole-stripprefix", "pihole-addprefix"]
+    [http.routers.pihole.tls]
+      certResolver = "default-ssl"
+
+
+# pi-hole : service
+[http.services]
+  [http.services.service-pihole.loadBalancer]
+    [[http.services.service-pihole.loadBalancer.servers]]
+      url = "http://rpi"
+
