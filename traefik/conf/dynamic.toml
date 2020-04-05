@@ -13,6 +13,9 @@
   # for pihole : add prefix
   [http.middlewares.pihole-addprefix.addPrefix]
     prefix = "/admin"
+  # for gitea : strip prefix
+  [http.middlewares.gitea-stripprefix.stripPrefix]
+    prefixes = ["/gitea"]
 
 
 # pi-hole : http router
@@ -20,6 +23,7 @@
   [http.routers.pihole]
     rule = "PathPrefix(`/pihole`)"
     service = "service-pihole"
+    priority = 100
     middlewares = ["global-auth", "pihole-stripprefix", "pihole-addprefix"]
     [http.routers.pihole.tls]
       certResolver = "default-ssl"
@@ -29,5 +33,20 @@
 [http.services]
   [http.services.service-pihole.loadBalancer]
     [[http.services.service-pihole.loadBalancer.servers]]
-      url = "http://rpi"
+      url = "http://rpi:80"
 
+
+# gitea : http router
+[http.routers.gitea]
+  rule = "PathPrefix(`/gitea`)"
+  service = "service-gitea"
+  priority = 100
+  middlewares = ["global-auth", "gitea-stripprefix"]
+  [http.routers.gitea.tls]
+    certResolver = "default-ssl"
+
+
+# gitea : service
+[http.services.service-gitea.loadBalancer]
+  [[http.services.service-gitea.loadBalancer.servers]]
+    url = "http://rpi:3000"
