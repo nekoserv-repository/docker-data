@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html version="-//W3C//DTD XHTML 1.1//EN"
+      xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.w3.org/1999/xhtml
+                          http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd">
+	<head>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<title>
+			NS0 - Applications
+		</title>
+		<link rel="shortcut icon" href="favicon.png" type="image/png"/>
+		<link rel="stylesheet" media="screen" type="text/css" href="media/style.css"/>
+		<script type="text/javascript" src="media/main.js"></script>
+	</head>
+	<!--<body onload="javascript:checkCredentials(); javascript:resumeNavigation();">-->
+	<body onload="javascript:resumeNavigation();">
+		<div id="fanart" style="display: none;">
+		</div>
+		<div id="update_bar">
+		</div>
+		<div id="wrapper" class="clearfix">
+			<div id="col1" class="col">
+				<ul class="modules">
+					<li>
+						<div id="applications" class="module" onmouseover="javascript:checkShowMenu()"
+							onmouseout="javascript:checkHideMenu()" style="z-index: 2;">
+							<h2 onclick="javascript:toggleMenu();">
+								Applications
+							</h2>
+							<ul id="appMenu" style="display: none">
+								<li>
+									<a class="clearfix"
+										title="Show Aria2" href="#aria2"
+										onclick="javascript:loadApp('/aria2')">
+									<span
+										class="name">
+									<img src="media/aria2.png" alt=""
+										height="20" width="20"/>
+									<span>
+									Aria2
+									</span>
+									</span>
+									<span class="description">
+									</span>
+									</a>
+								</li>
+								<li>
+									<a class="clearfix"
+										title="Show CouchPotato" href="#couchpotato"
+										onclick="javascript:loadApp('/couchpotato')">
+									<span
+										class="name">
+									<img src="media/CouchPotato.png" alt=""
+										height="20" width="20"/>
+									<span>
+									CouchPotato
+									</span>
+									</span>
+									<span class="description">
+									</span>
+									</a>
+								</li>
+								<li>
+									<a class="clearfix"
+										title="Show Headphones" href="#headphones"
+										onclick="javascript:loadApp('/headphones/home')">
+									<span
+										class="name">
+									<img src="media/HeadPhones.png" alt=""
+										height="20" width="20"/>
+									<span>
+									Headphones
+									</span>
+									</span>
+									<span class="description">
+									</span>
+									</a>
+								</li>
+								<li>
+									<a class="clearfix" title="Show Medusa"
+										href="#medusa" onclick="javascript:loadApp('/medusa')">
+									<span
+										class="name">
+									<img src="media/Medusa.png" alt="" height="20"
+										width="20"/>
+									<span>
+									Medusa
+									</span>
+									</span>
+									<span class="description">
+									</span>
+									</a>
+								</li>
+								<li>
+									<a class="clearfix" title="View server statistics"
+										href="#stats" onclick="javascript:loadApp('/stats/')">
+									<span
+										class="name">
+									<img src="media/munin.png" alt="" height="20"
+										width="20"/>
+									<span>
+									Munin
+									</span>
+									</span>
+									<span class="description">
+									</span>
+									</a>
+								</li>
+								<li>
+									<a class="clearfix" title="Show SABnzbd+"
+										href="#sabnzbd" onclick="javascript:loadApp('/sabnzbd')">
+									<span
+										class="name">
+									<img src="media/SabNZBd.png" alt="" height="20"
+										width="20"/>
+									<span>
+									SABnzbd
+									</span>
+									</span>
+									<span
+										class="description">
+									</span>
+									</a>
+								</li>
+								<li>
+									<a class="clearfix" title="Show rTorrent"
+										href="#rtorrent" onclick="javascript:loadApp('/rtorrent/')">
+									<span
+										class="name">
+									<img src="media/rtorrent.png" alt="" height="20"
+										width="20"/>
+									<span>
+									rTorrent
+									</span>
+									</span>
+									<span class="description">
+									</span>
+									</a>
+								</li>
+								<li>
+									<a class="clearfix" title="Show ZNC"
+										href="#znc" onclick="javascript:loadApp('/znc/')">
+									<span
+										class="name">
+									<img src="media/znc.png" alt="" height="20"
+										width="20"/>
+									<span>
+									ZNC
+									</span>
+									</span>
+									<span class="description">
+									</span>
+									</a>
+								</li>
+								<li>
+									<a class="clearfix" title="Logout"
+										href="javascript:logout()">
+									<span class="name">
+									<img src="media/logout.png" alt="" height="20" width="20"/>
+									<span>
+									Logout
+									</span>
+									</span>
+									<span class="description">
+									</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div><object id="appFrame"></object></div>
+	</body>
+</html>
+
