@@ -32,6 +32,6 @@
 [certificatesResolvers.default-ssl.acme]
   email = "contact@domain.tld"
   storage = "/etc/traefik-ssl/acme.json"
-  [certificatesResolvers.default-ssl.acme.httpChallenge]
-    # used during the challenge
-    entryPoint = "web"
+  [certificatesResolvers.default-ssl.acme.dnsChallenge]
+    provider = "ovh"
+    delayBeforeCheck = "10"
