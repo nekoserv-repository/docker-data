@@ -4,14 +4,10 @@
 
 ## general settings
 directory.default.set = /home/incomplete/
-#session.path.set = ~/session/
-network.port_range.set = 52123-52123
+network.port_range.set = 12345-12345
 network.port_random.set = no
 pieces.hash.on_completion = no
 protocol.encryption.set = allow_incoming,try_outgoing,enable_retry
-#network.scgi.open_local = ~/scgi/rtorrent.sock
-#network.scgi.open_port = openvpn-client:5001
-#network.scgi.open_port = 127.0.0.1:5001
 network.scgi.open_port = 0.0.0.0:5001
 trackers.use_udp.set = yes
 encoding.add = utf8
@@ -32,7 +28,7 @@ method.set_key = event.download.finished, TorrentToMedia, "execute={python,~/nzb
 #schedule2 = watch_directory4, 30, 30, "load.start=~/watch/UNCAT/*.torrent,d.custom1.set=UNCAT"
 
 ## uncategorized by default
-method.set_key = event.download.inserted, UNCAT, "d.custom1.set=UNCAT"
+#method.set_key = event.download.inserted_new, UNCAT, "d.custom1.set=UNCAT"
 
 ## Enable the default ratio group.
 group.seeding.ratio.enable=
