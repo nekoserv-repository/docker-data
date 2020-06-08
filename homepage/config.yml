@@ -70,37 +70,37 @@ services:
     icon: "fab fa-docker"
     items:
       - name: "Aria2"
-        logo: "/assets/aria2.png"
+        logo: "/assets/external-resources/aria2.png"
         subtitle: "Lightweight multi-protocol download utility."
         url: "/aria2/"
         target: "_blank"
       - name: "CouchPotato"
-        logo: "/assets/couchpotato.png"
+        logo: "/assets/external-resources/couchpotato.png"
         subtitle: "Download movies automatically."
         url: "/couchpotato/"
         target: "_blank"
       - name: "Flood"
-        logo: "/assets/flood.png"
+        logo: "/assets/external-resources/flood.png"
         subtitle: "Web UI for fully-automated rTorrent client."
         url: "/flood/"
         target: "_blank"
       - name: "Jackett"
-        logo: "/assets/jackett.png"
+        logo: "/assets/external-resources/jackett.png"
         subtitle: "Proxy aggregator for torrent indexers."
         url: "/jackett/"
         target: "_blank"
       - name: "Medusa"
-        logo: "/assets/medusa.png"
+        logo: "/assets/external-resources/medusa.png"
         subtitle: "Automatic video library manager for TV shows."
         url: "/medusa/"
         target: "_blank"
       - name: "NZBHydra 2"
-        logo: "/assets/nzbhydra2.png"
+        logo: "/assets/external-resources/nzbhydra2.png"
         subtitle: "Proxy aggregator for newznab usenet indexers."
         url: "/nzbhydra/"
         target: "_blank"
       - name: "SABnzbd"
-        logo: "/assets/sabnzbd.png"
+        logo: "/assets/external-resources/sabnzbd.png"
         subtitle: "Free and easy binary newsreader."
         url: "/sabnzbd/"
         target: "_blank"
@@ -109,35 +109,25 @@ services:
     icon: "fas fa-code-branch"
     items:
       - name: "Drone"
-        logo: "/assets/drone.png"
+        logo: "/assets/external-resources/drone.png"
         subtitle: "Automate software testing and delivery."
-        url: "javascript:{ \
-          function get_url() {
-            var subDomain = location.hostname.split('.').shift(); \
-            var url = location.hostname.replace(subDomain, 'ci'); \
-            var proto = window.location.protocol; \
-            return proto+'//'+url; \
-          }; \
-          void(window.open(get_url(), '_blank')); \
-        }; "
+        url: "#"
+        target: "_blank"
+        tag: "dummy"
+        tagstyle: "is-hidden drone"
       - name: "Gitea"
-        logo: "/assets/gitea.png"
+        logo: "/assets/external-resources/gitea.png"
         subtitle: "A painless self-hosted Git service."
-        url: "javascript:{ \
-          function get_url() {
-            var subDomain = location.hostname.split('.').shift(); \
-            var url = location.hostname.replace(subDomain, 'ci'); \
-            var proto = window.location.protocol; \
-            return proto+'//'+url; \
-          }; \
-          void(window.open(get_url()+'/gitea/', '_blank')); \
-        }; "
+        url: "#"
+        target: "_blank"
+        tag: "dummy"
+        tagstyle: "is-hidden gitea"
 
   - name: "Tools"
     icon: "fas fa-server"
     items:
       - name: "Pi-hole"
-        logo: "/assets/pihole.png"
+        logo: "/assets/external-resources/pihole.png"
         subtitle: "A black hole for Internet advertisements."
         url: "/pihole/"
         target: "_blank"
