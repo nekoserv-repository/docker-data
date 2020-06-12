@@ -2,11 +2,16 @@
 
 # middlewares
 [http.middlewares]
-  # basic auth : declaring the user list
+  # global auth : declaring the user list
   [http.middlewares.global-auth.basicAuth]
     realm = "Access denied"
     removeHeader = true
     usersFile = "/etc/traefik/auth-usersfile"
+  # CI/CD auth : declaring the user list
+  [http.middlewares.ci-auth.basicAuth]
+    realm = "Access denied"
+    removeHeader = true
+    usersFile = "/etc/traefik/ci-auth-usersfile"
   # for pihole : strip prefix
   [http.middlewares.pihole-stripprefix.stripPrefix]
     prefixes = ["/pihole"]
