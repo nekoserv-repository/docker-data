@@ -11,6 +11,8 @@ header: true
 #footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
 footer: false
 
+columns: 3
+
 # connectivity
 connectivityCheck: false
 
@@ -65,8 +67,7 @@ links:
 # First level array represent a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
-  - name: "Docker"
-    #icon: "fas fa-cloud-download-alt"
+  - name: "Docker containers"
     icon: "fab fa-docker"
     items:
       - name: "Aria2"
@@ -79,6 +80,25 @@ services:
         subtitle: "Web UI for fully-automated rTorrent client."
         url: "/flood/"
         target: "_blank"
+      - name: "pyLoad"
+        logo: "/assets/external-resources/pyload.png"
+        subtitle: "Free and Open Source download manager."
+        url: "/pyload/"
+        target: "_blank"
+      - name: "SABnzbd"
+        logo: "/assets/external-resources/sabnzbd.png"
+        subtitle: "Free and easy binary newsreader."
+        url: "/sabnzbd/"
+        target: "_blank"
+      - name: "Youtube-dl"
+        logo: "/assets/external-resources/youtube-dl.png"
+        subtitle: "Download videos from YouTube and a few more sites."
+        url: "/youtube-dl/"
+        target: "_blank"
+
+  - name: " "
+    icon: "fab"
+    items:
       - name: "Jackett"
         logo: "/assets/external-resources/jackett.png"
         subtitle: "Proxy aggregator for torrent indexers."
@@ -99,25 +119,10 @@ services:
         subtitle: "Proxy aggregator for newznab usenet indexers."
         url: "/nzbhydra/"
         target: "_blank"
-      - name: "pyLoad"
-        logo: "/assets/external-resources/pyload.png"
-        subtitle: "Free and Open Source download manager."
-        url: "/pyload/"
-        target: "_blank"
       - name: "Radarr"
         logo: "/assets/external-resources/radarr.png"
         subtitle: "Movie collection manager."
         url: "/radarr/"
-        target: "_blank"
-      - name: "SABnzbd"
-        logo: "/assets/external-resources/sabnzbd.png"
-        subtitle: "Free and easy binary newsreader."
-        url: "/sabnzbd/"
-        target: "_blank"
-      - name: "Youtube-dl"
-        logo: "/assets/external-resources/youtube-dl.png"
-        subtitle: "Download videos from YouTube and a few more sites."
-        url: "/youtube-dl/"
         target: "_blank"
 
   - name: "DevOps"
@@ -137,13 +142,3 @@ services:
         target: "_blank"
         tag: "dummy"
         tagstyle: "is-hidden gitea"
-
-  - name: "Tools"
-    icon: "fas fa-server"
-    items:
-      - name: "Pi-hole"
-        logo: "/assets/external-resources/pihole.png"
-        subtitle: "A black hole for Internet advertisements."
-        url: "/pihole/"
-        target: "_blank"
-
