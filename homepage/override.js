@@ -31,7 +31,7 @@ function updateHref(element, subDomain, suffix) {
  * Observe changes to the DOM in order to change HREF attribute for some links.
  */
 var observer = new MutationObserver(function (mutations, me) {
-  var elements = ["drone", "gitea"];
+  var elements = ["drone", "gitea", "registry-mngr"];
   elements.forEach(element => {
     var item = document.getElementsByClassName(element);
     if (item && item[0]) {
