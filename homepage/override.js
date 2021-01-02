@@ -19,8 +19,10 @@ function build_url(newSubdomain) {
  * @param {suffix} if specified, add suffix to new url
  */
 function updateHref(element, subDomain, suffix) {
-  if (suffix == undefined) {
-    suffix = '';
+  if (suffix == undefined || suffix == '') {
+    suffix = '/';
+  } else {
+    suffix = '/'+suffix+'/';
   }
   element.parentElement.parentElement.href = build_url(subDomain)+suffix;
 }
@@ -29,17 +31,18 @@ function updateHref(element, subDomain, suffix) {
  * Observe changes to the DOM in order to change HREF attribute for some links.
  */
 var observer = new MutationObserver(function (mutations, me) {
-  // drone obeserver
-  var drone = document.getElementsByClassName("drone");
-  if (drone && drone[0]) {
-    updateHref(drone[0], 'ci');
-  }
-  // gitea obeserver
-  var gitea = document.getElementsByClassName("gitea");
-  if (gitea && gitea[0]) {
-    updateHref(gitea[0], 'ci', '/gitea/');
-    me.disconnect(); // stop observing
-  }
+  var elements = ["drone", "gitea"];
+  elements.forEach(element => {
+    var item = document.getElementsByClassName(element);
+    if (item && item[0]) {
+      // waiting DRONE_SERVER_PATH to be implemented
+      if (element == "drone") {
+        element ='';
+      }
+      updateHref(item[0], 'ci', element);
+    }
+  });
+  me.disconnect(); // stop observing
 });
 
 /**
