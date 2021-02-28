@@ -18,6 +18,11 @@ connectivityCheck: false
 
 # Optionnal theme customization
 theme: default
+
+# Optional custom stylesheet
+stylesheet:
+  - "assets/external-resources/custom.css"
+
 colors:
   light:
     highlight-primary: "#3367d6"
