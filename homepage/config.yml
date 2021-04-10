@@ -95,11 +95,6 @@ services:
         subtitle: "Free and easy binary newsreader."
         url: "/sabnzbd/"
         target: "_blank"
-      - name: "Youtube-dl"
-        logo: "/assets/external-resources/youtube-dl.png"
-        subtitle: "Download videos from YouTube and a few more sites."
-        url: "/youtube-dl/"
-        target: "_blank"
 
   - name: " "
     icon: "fab"
