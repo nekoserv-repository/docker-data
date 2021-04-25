@@ -95,6 +95,11 @@ services:
         subtitle: "Free and easy binary newsreader."
         url: "/sabnzbd/"
         target: "_blank"
+      - name: "Trilium"
+        logo: "/assets/external-resources/trilium.png"
+        subtitle: "Build you personal knowledge base."
+        url: "/trilium/"
+        target: "_blank"
 
   - name: " "
     icon: "fab"
