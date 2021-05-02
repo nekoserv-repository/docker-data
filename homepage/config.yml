@@ -50,11 +50,8 @@ colors:
     link-hover: "#3273dc"
 
 # Optional message
-#message:
-  #url: https://b4bz.io
-#  style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
-#   title: "👋 Demo !"
-#  content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
+message:
+  style: "is-hidden"
 
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
