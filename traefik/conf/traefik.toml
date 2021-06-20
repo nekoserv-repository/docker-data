@@ -15,10 +15,9 @@
   directory = "/etc/traefik"
   watch = true
 
-# disable dashboard and traefik api
+# enable dashboard (secure mode)
 [api]
-  dashboard = false
-  insecure = false
+  dashboard = true
 
 # define entrypoints
 [entryPoints]
