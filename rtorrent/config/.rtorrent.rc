@@ -17,9 +17,9 @@ method.set_key = event.download.finished, TorrentToMedia, "execute={python,~/nzb
 ## Enable the default ratio group.
 group.seeding.ratio.enable=
 
-## 200% ratio
-group2.seeding.ratio.min.set = 200
-group2.seeding.ratio.max.set = 200
+## 300% ratio
+group2.seeding.ratio.min.set = 300
+group2.seeding.ratio.max.set = 300
 group2.seeding.ratio.upload.set = 1M
 
 # Changing the command triggered when the ratio is reached.
