@@ -19,6 +19,10 @@
 [api]
   dashboard = true
 
+# disable traefik pilot
+[pilot]
+  dashboard = false
+
 # define entrypoints
 [entryPoints]
   [entryPoints.web]
