@@ -51,14 +51,7 @@ colors:
 
 # Optional message
 message:
-  icon: "far fa-lightbulb"
-  url: /jokes-api/random.php
-  title: "Jokes API"
-  content: "Loading..."
-  mapping:
-    title: "joke"
-    content: "answer"
-  style: "is-light"
+  style: "is-hidden"
 
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
