@@ -1,0 +1,47 @@
+###
+# traefik configuration
+
+## logs
+log:
+  level: INFO
+
+
+## providers
+providers:
+  # default docker provider
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+  # dynamic provider
+  file:
+    directory: "/etc/traefik"
+    watch: true
+
+
+## enable dashboard (secure mode)
+api:
+  dashboard: true
+
+
+## disable traefik pilot
+pilot:
+  dashboard: false
+
+
+## define entrypoints
+entryPoints:
+  web:
+    address: ":80"
+  web-secure:
+    address: ":443"
+
+
+## https mode : let's encrypt
+certificatesResolvers:
+  default-ssl:
+    acme:
+      email: "contact@domain.tld"
+      storage: "/etc/traefik-ssl/acme.json"
+      dnsChallenge:
+        provider: ovh
+        delayBeforeCheck: 10

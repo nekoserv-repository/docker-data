@@ -1,0 +1,29 @@
+## Dynamic configuration
+
+http:
+  ## middlewares
+  middlewares:
+    # global-auth : configuration
+    global-auth:
+      basicAuth:
+        realm: "Access denied"
+        removeHeader: true
+        usersFile: "/etc/traefik/auth-usersfile"
+
+  ## routers
+  routers:
+    # ci : http router rules
+    ci:
+      rule: "Host(`ci.domain.tld`)"
+      service: service-ci
+      priority: 100
+      tls:
+        certResolver: default-ssl
+
+  ## services
+  services:
+    # ci : service location
+    service-ci:
+      loadBalancer:
+        servers:
+        - "http://rpi.domain.tld"
