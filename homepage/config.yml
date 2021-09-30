@@ -152,7 +152,7 @@ services:
         tag: "dummy"
         tagstyle: "is-hidden registry-mngr"
       - name: "Traefik"
-        icon: "fas fa-project-diagram"
+        logo: "/assets/external-resources/traefik.png"
         subtitle: "The cloud-native application proxy."
         url: "/dashboard/"
         target: "_blank"
