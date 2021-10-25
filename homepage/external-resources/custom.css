@@ -3,6 +3,11 @@
   color: #00897b;
 }
 
+/** Monit. */
+.fa-chart-line {
+  color: #27b927;
+}
+
 /** Registry UI. */
 .fa-book {
   color: #25313b;
