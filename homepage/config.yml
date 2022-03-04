@@ -90,7 +90,7 @@ services:
       - name: "pyLoad"
         logo: "/assets/external-resources/pyload.png"
         subtitle: "Free and Open Source download manager."
-        url: "/pyload/"
+        url: "/pyload/login?next=%2Fpyload%2F"
         target: "_blank"
       - name: "SABnzbd"
         logo: "/assets/external-resources/sabnzbd.png"
