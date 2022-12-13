@@ -8,14 +8,19 @@ network.port_random.set = no
 pieces.hash.on_completion.set = no
 protocol.encryption.set = allow_incoming,try_outgoing,enable_retry
 network.scgi.open_port = 0.0.0.0:5001
-trackers.use_udp.set = yes
 encoding.add = utf8
-# dht and pex are needed for magnet links
+trackers.use_udp.set = yes
+
+# DHT and PEX are needed for magnet links - https://github.com/rakshasa/rtorrent/wiki/Using-DHT
 dht.mode.set = auto
-## TODO :
-# https://github.com/rakshasa/rtorrent/wiki/Using-DHT
-# dht.port.set = 12345
+dht.port.set = 12345
 protocol.pex.set = yes
+
+# Adding public DHT servers for easy bootstrapping
+schedule2 = dht_node_1, 5, 0, "dht.add_node=router.utorrent.com:6881"
+schedule2 = dht_node_2, 5, 0, "dht.add_node=dht.transmissionbt.com:6881"
+schedule2 = dht_node_3, 5, 0, "dht.add_node=router.bitcomet.com:6881"
+schedule2 = dht_node_4, 5, 0, "dht.add_node=dht.aelitis.com:6881"
 
 ## schedule finished jobs with nzbToMedia
 method.set_key = event.download.finished, TorrentToMedia, "execute={python,~/nzbToMedia/TorrentToMedia.py,\"$d.base_path=\",\"$d.name=\",\"$d.custom1=\",\"$d.hash=\"}"
