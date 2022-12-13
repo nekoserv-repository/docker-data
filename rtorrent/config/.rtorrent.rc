@@ -118,3 +118,8 @@ schedule2 = session_save, 1200, 3600, ((session.save))
 ## Debug logs
 #log.open_file = "de", (cat,/home/incomplete/rtorrent_debug.,(system.time_seconds),.log)
 #log.add_output = "debug", "de"
+
+## Debug and update config
+# ^C => command mode
+# set var	: foo.set=bar;	| ex : network.port_range.set=123
+# display var	: print=$foo=	| ex : print=$network.port_range=
