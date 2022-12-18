@@ -6,6 +6,11 @@ log:
   level: INFO
 
 
+## anonymous usage data
+global:
+  sendAnonymousUsage: false
+
+
 ## providers
 providers:
   # default docker provider
