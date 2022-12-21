@@ -22,6 +22,15 @@ schedule2 = dht_node_2, 5, 0, "dht.add_node=dht.transmissionbt.com:6881"
 schedule2 = dht_node_3, 5, 0, "dht.add_node=router.bitcomet.com:6881"
 schedule2 = dht_node_4, 5, 0, "dht.add_node=dht.aelitis.com:6881"
 
+
+## auto-add the first 5 trackers from https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt
+method.set_key = event.download.inserted,add_tracker_1,"d.tracker.insert=\"1\",\"udp://tracker.opentrackr.org:1337/announce\""
+method.set_key = event.download.inserted,add_tracker_2,"d.tracker.insert=\"2\",\"udp://open.tracker.cl:1337/announce\""
+method.set_key = event.download.inserted,add_tracker_3,"d.tracker.insert=\"3\",\"udp://9.rarbg.com:2810/announce\""
+method.set_key = event.download.inserted,add_tracker_4,"d.tracker.insert=\"4\",\"udp://opentracker.i2p.rocks:6969/announce\""
+method.set_key = event.download.inserted,add_tracker_5,"d.tracker.insert=\"5\",\"https://opentracker.i2p.rocks:443/announce\""
+
+
 ## schedule finished jobs with nzbToMedia
 method.set_key = event.download.finished, TorrentToMedia, "execute={python,~/nzbToMedia/TorrentToMedia.py,\"$d.base_path=\",\"$d.name=\",\"$d.custom1=\",\"$d.hash=\"}"
 
