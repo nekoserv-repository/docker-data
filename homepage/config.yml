@@ -72,7 +72,7 @@ services:
     icon: "fab fa-docker"
     items:
       - name: "Aria2"
-        icon: "fas fa-file-download"
+        logo: "/assets/external-resources/aria2.svg"
         subtitle: "Lightweight multi-protocol download utility."
         url: "/aria2/"
         target: "_blank"
@@ -130,7 +130,7 @@ services:
     icon: "fas fa-tools"
     items:
       - name: "Monit"
-        icon: "fas fa-chart-line"
+        logo: "/assets/external-resources/monit.svg"
         subtitle: "System monitoring and error recovery."
         url: "/monit/"
         target: "_blank"
