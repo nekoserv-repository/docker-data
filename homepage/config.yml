@@ -24,9 +24,9 @@ stylesheet:
 
 colors:
   light:
-    highlight-primary: "#d0caca"
-    highlight-secondary: "#e1dede"
-    highlight-hover: "#ececec"
+    highlight-primary: "#e1dede"
+    highlight-secondary: "#d9d8d8"
+    highlight-hover: "#e1dede"
     background: "#f5f5f5"
     card-background: "#ffffff"
     text: "#363636"
@@ -36,9 +36,9 @@ colors:
     card-shadow: rgba(0, 0, 0, 0.1)
     link-hover: "#3273dc"
   dark:
-    highlight-primary: "#7f7c7c"
-    highlight-secondary: "#d0caca"
-    highlight-hover: "#e1dede"
+    highlight-primary: "#484747"
+    highlight-secondary: "#373636"
+    highlight-hover: "#484747"
     background: "#131313"
     card-background: "#2b2b2b"
     text: "#eaeaea"
