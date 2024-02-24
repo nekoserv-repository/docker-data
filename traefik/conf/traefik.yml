@@ -10,6 +10,9 @@ log:
 global:
   sendAnonymousUsage: false
 
+## enable ping
+ping: {}
+
 
 ## providers
 providers:
