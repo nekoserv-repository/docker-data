@@ -10,6 +10,7 @@ log:
 global:
   sendAnonymousUsage: false
 
+
 ## enable ping
 ping: {}
 
@@ -33,8 +34,6 @@ api:
 
 ## define entrypoints
 entryPoints:
-  web:
-    address: ":80"
   web-secure:
     address: ":443"
 
