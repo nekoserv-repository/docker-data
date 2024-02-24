@@ -32,10 +32,16 @@ api:
   dashboard: true
 
 
+## enable experimental http3
+experimental:
+  http3: true
+
+
 ## define entrypoints
 entryPoints:
   web-secure:
     address: ":443"
+    http3: {}
 
 
 ## https mode : let's encrypt
