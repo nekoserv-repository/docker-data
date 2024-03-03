@@ -6,6 +6,10 @@ log:
   level: INFO
 
 
+#accessLog:
+#  filePath: "/tmp/traefik.log"
+
+
 ## anonymous usage data
 global:
   sendAnonymousUsage: false
