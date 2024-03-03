@@ -43,6 +43,10 @@ experimental:
 
 ## define entrypoints
 entryPoints:
+  # for monit (docker image force using port 80)
+  web:
+    address: ":80"
+  # default entrypoint
   web-secure:
     address: ":443"
     http3: {}
