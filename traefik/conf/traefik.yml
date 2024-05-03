@@ -36,11 +36,6 @@ api:
   dashboard: true
 
 
-## enable experimental http3
-experimental:
-  http3: true
-
-
 ## define entrypoints
 entryPoints:
   # for monit (docker image force using port 80)
